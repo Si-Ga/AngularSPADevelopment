@@ -60,7 +60,7 @@ export class DemoContainerComponent implements OnInit {
     return result;
   }
 
-  private setMetadata() {
+  setMetadata() {
     this.router.events
       .pipe(
         filter((evt: Event) => evt instanceof NavigationEnd),
@@ -77,5 +77,9 @@ export class DemoContainerComponent implements OnInit {
             ? `Demo: ${demo.title} - Component: ${demo.component}`
             : "Please select a demo";
       });
+  }
+
+  markdownSaved(md) {
+    console.log("Markdown saved:", md);
   }
 }

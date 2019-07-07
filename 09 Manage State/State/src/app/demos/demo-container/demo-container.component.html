@@ -30,7 +30,10 @@
       </mat-toolbar>
       <div class="workbench"><router-outlet></router-outlet></div>
       <div class="editor" *ngIf="showEditor">
-        <app-markdown-editor></app-markdown-editor>
+        <app-markdown-editor
+          [placeHolder]="'# Sample'"
+          (onMarkdownSaved)="markdownSaved($event)"
+        ></app-markdown-editor>
       </div>
     </div>
   </mat-sidenav-content>

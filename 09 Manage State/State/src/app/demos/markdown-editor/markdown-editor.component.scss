@@ -1,0 +1,26 @@
+@import "stylevars";
+
+textarea,
+#editor div {
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+textarea {
+  border: none;
+  border-right: 1px solid #ccc;
+  resize: none;
+  outline: none;
+  background-color: $medium-col;
+  color: white;
+  font-family: "Monaco", courier, monospace;
+  padding: 1rem;
+}
+
+code {
+  color: #f66;
+}
